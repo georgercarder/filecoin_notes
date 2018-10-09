@@ -123,4 +123,20 @@ A wins the game if she convinces V that she is storing all n different replicas,
 
 If any call to PoS.Verify fails, A loses.
 
+-------------------
+
+PoRep is said to be secure if there is no adversary that wins PoRep game with more than negligible probability.
+
+Given the attacks defined above and a game that can test security, we can now formally define PoRep schemes.
+
+-----------------
+
+**Def** (PI^PoRep)  A general PoRep proving scheme PI^PoRep = (Setup, Prove, Verify) is a set of algorithms that together enable a prover P to convince verifier V that P is storing a replica R^D of data D.
+
+No two replicas R^D_i, R^D_j can be deduplicated into the same physical storage, they must be stored independently.
+
+The three algorithms are:
+
+R^D, S_P, S_V <- PoRep.Setup(1^l, D) where S_P, S_V are scheme specific variables for P and V respectively, that depend on the data D and a security parameter l.
+PoRep.Setup is used to initialize the proving scheme and give P and V information they will use to run PoRep.Prove and PoRep.Verify. Some schemes may require either party to compute PoRep.Setup, require it to be a secure multi-party computation, or allow any party to run it.
 
