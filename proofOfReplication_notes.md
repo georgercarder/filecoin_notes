@@ -15,3 +15,7 @@ Useful in "DSN" Decentralized Storage Network settings where a verifier may be n
 
 **transparent** A scheme is transparent if there is no extra info, sk, that enables P to generate a valid proof without having data D. i.e. cannot forge a proof of replication.
 Necessary in Decentralized Storage Networks.
+
+**retrievability** A scheme supports retrievability, if it is possible for V to extract and reconstruct D merely by issueing many challenges c to P and aggregating corresponding proofs pi^c, see PoRet.
+
+
