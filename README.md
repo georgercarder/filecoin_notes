@@ -31,4 +31,12 @@ Authentication can help make schemes non-outsourceable, since a prover would hav
 
 **useful**  A scheme is useful if it can achieve separte useful work or useful storage as part of its operation or as a side effect. Example: storing and verifying a verifier-chosen D (PDP, PoRet, PoRep) is useful wherease storing and verifying a randomly-generated D (PoSpace) is not useful.
 
+#### Kinds of proofs
 
+Provable Data Possession (PDP) schemes allow user V to send data D to server P, and later V can repeatedly check whether P is still storing D.
+Useful in Cloud storage or other outsourcing settings.
+Can be either private or publicly verifiable, static or dynamic. Many schemes exist.
+
+Proof of Retrievability (PoRet) similar to PDP but enable extracting D. Prevents P from holding D hostage, since V can reconstruct D from leaks from proofs.. --Shamir secrets..
+
+Proof of Storate (Pos) schemes allow V to outsource storage of D to P and then repeatedly check if P is still storing D. PDPs and PoRets were independently introduced around 2007. Since then, the concept of Proofs of Storage generalizes PDP and PoRets. This paper is PoReps, a new type of Pos.
