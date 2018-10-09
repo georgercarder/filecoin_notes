@@ -42,4 +42,4 @@ Proof of Retrievability (PoRet) similar to PDP but enable extracting D. Prevents
 Proof of Storage (Pos) schemes allow V to outsource storage of D to P and then repeatedly check if P is still storing D. PDPs and PoRets were independently introduced around 2007. Since then, the concept of Proofs of Storage generalizes PDP and PoRets. This paper is PoReps, a new type of Pos.
 
 Proof of Replication (PoRep) scheme are another kind of Pos that additionally ensures that P is dedicating unique physical storage to storing D. P cannot pretend to store D twice and deduplicate the storage. Useful in Cloud Storage and DSN where ensuring proper level of replication is important, and where rational servers may create Sybil identities and sell their service twice ot the same user. PoRep schemes ensure each replica is stored independently. Some PoRep schemes may also be PoRet schemes.
-
+Proof of Work (PoW) schemes allow prover P to convince verifier V that P has spent some resources. The original use case presents this scheme to allow a server V to ratelimit usage by asking user P to do some expensive work per-request.
