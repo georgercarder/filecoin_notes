@@ -97,3 +97,30 @@ Generation attack is what prevents most PoS schemes from being used to build Dec
 
 ### The aim of PoRep is to solve it
 
+**Def**
+
+(RepGame) ({1, 0} <- RepGame(PI^PoS, d))
+
+Adversary A with fixed storage l adaptively interacts with an honest verifier V and must prove to V that A is storing n replicas of D so that n = l + 1.
+
+A chooses data to replicate D, so that A may generate it on demand.
+
+A can interact with separte honest storage provider P with infinite free storage.
+
+A may use P to only store and retrieve arbitrary data with a latency of d.
+
+A may create and control any Sybil identities that A wishes.
+
+V and A use PoS proving scheme PI^PoS.
+
+V asks A to store n replicas of D and runs PoS.Setup for each replica.
+
+A only has enough storage for l replicase of D.
+
+Then V issues a sequence of verification challenges c_i for each replica i in {0,n-1}.
+
+A wins the game if she convinces V that she is storing all n different replicas, namely if A produces a set of valid proofs pi^c_i that convinces V that PoS.Verify(S_V, c_i, pi^c_i) succeeds for all i in the above index set.
+
+If any call to PoS.Verify fails, A loses.
+
+
