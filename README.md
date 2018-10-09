@@ -62,3 +62,16 @@ pi^c <- PoS.Prove(S_P, D, c) where c is a challenge, and pi^c is a proof that P 
 --------------------------------
 ### Motivation for Proofs-of-Replication
 
+
+Scenarios:
+
+**replication** A user V wishes to hire P to store n independent copies of data D. i.e. V wants a replication factor of n. PDP and PoRet schemes do not give V a way to verify P is storing these n replicas separately rather than pretending to do so.
+
+**deduplication** A user V asks each of n different servers P_0,...,P_n-1 in P to store data D. With normal PDP and PoRet schemes, the servers could collude and store D only once. instead of n times (once each). When issued a challenge, P_i would only need to retrieve D from whichever P_j is actually storing it,
+calculate the proof, and discard D.
+
+**Sybil idnetities** A setup very similar to deduplicatoin, but now all servers P_0,...,P_n-1 in P are secretly just on server, wlog P_0. The others are Sybil identities.
+
+**networks** A set of users and servers come together to form a Decentralized Storage Network, where all participants simulate a unified service that outsources storage to each individual server.
+Ideally, each individual server could prove they are storing each replica of data uniquely, in a transparent and publicly verifiable way.
+
