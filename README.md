@@ -48,3 +48,17 @@ Proof of Space (PoSpace) scheme allows prover P to convice verifier V that P has
 In a sense, a PoS scheme is also PoSpace, since PoS implies the use of storage resources.
 
 **Proof of SpaceTime** schemes allow prover P to convince verifier V that P has spent some "spacetime" (storage space over time) resources. This is a PoSpace with a sequence of checks over time. A useful version of PoSt would be valuable as it could replace other PoW schemes with a storage service. This paper introduces such a scheme, based on a sequential PoReps.
+
+**Def 1.1**
+
+(PI^PoS) we define a simplified PoS scheme PI^PoS = (Setup, Prove, Verify)
+
+S_P,S_V <- PoS.Setup(1^l, D) where S_P, S_V are scheme specific setup variables of P, V respectively that depend of data D and a security parameter 1^l.
+
+pi^c <- PoS.Prove(S_P, D, c) where c is a challenge, and pi^c is a proof that P has access to D.
+
+{0, 1} <- PoS.Verify(S_V, c, pi^c) which V runs to check where proof from P is correct.
+
+--------------------------------
+### Motivation for Proofs-of-Replication
+
