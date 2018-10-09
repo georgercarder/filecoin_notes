@@ -43,3 +43,8 @@ Proof of Storage (Pos) schemes allow V to outsource storage of D to P and then r
 
 Proof of Replication (PoRep) scheme are another kind of Pos that additionally ensures that P is dedicating unique physical storage to storing D. P cannot pretend to store D twice and deduplicate the storage. Useful in Cloud Storage and DSN where ensuring proper level of replication is important, and where rational servers may create Sybil identities and sell their service twice ot the same user. PoRep schemes ensure each replica is stored independently. Some PoRep schemes may also be PoRet schemes.
 Proof of Work (PoW) schemes allow prover P to convince verifier V that P has spent some resources. The original use case presents this scheme to allow a server V to ratelimit usage by asking user P to do some expensive work per-request.
+
+Proof of Space (PoSpace) scheme allows prover P to convice verifier V that P has spent some storage resources. PoSpace schemes are PoW schemes where the expended resource is not computation but rather storage space.
+In a sense, a PoS scheme is also PoSpace, since PoS implies the use of storage resources.
+
+**Proof of SpaceTime** schemes allow prover P to convince verifier V that P has spent some "spacetime" (storage space over time) resources. This is a PoSpace with a sequence of checks over time. A useful version of PoSt would be valuable as it could replace other PoW schemes with a storage service. This paper introduces such a scheme, based on a sequential PoReps.
