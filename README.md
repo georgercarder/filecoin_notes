@@ -26,3 +26,9 @@ Necessary in Decentralized Storage Networks.
 
 **authenticated** A scheme is authenticated if the identity of the prover can be verified during a proof verification. Example, a digital signature might be required as part of generating pi^c to prove identity pk_i.
 Authentication can help make schemes non-outsourceable, since a prover would have to reveal secret key to others.
+
+**time-bounded** A proving scheme is time-bounded if a proof is only valid during a span of time. i.e. proof must be calculated within timeframe else it is not valid.
+
+**useful**  A scheme is useful if it can achieve separte useful work or useful storage as part of its operation or as a side effect. Example: storing and verifying a verifier-chosen D (PDP, PoRet, PoRep) is useful wherease storing and verifying a randomly-generated D (PoSpace) is not useful.
+
+
