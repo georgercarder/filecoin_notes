@@ -24,4 +24,5 @@ Necessary in Decentralized Storage Networks.
 
 **non-outsourceable** A scheme is non-outsourceable if P cannot outsource her work to some other prover P' (storage, work, proof-generation) and convince V that P did the work. Non-outsourceable schemes are useful in Cloud computing, Cryptocurrencty, and Decentralized Storage Network settings, where P may be rewareded for providing space, and the users or V wish to ensure P is actually providing the service.
 
-
+**authenticated** A scheme is authenticated if the identity of the prover can be verified during a proof verification. Example, a digital signature might be required as part of generating pi^c to prove identity pk_i.
+Authentication can help make schemes non-outsourceable, since a prover would have to reveal secret key to others.
