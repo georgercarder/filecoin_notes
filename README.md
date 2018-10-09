@@ -75,3 +75,16 @@ calculate the proof, and discard D.
 **networks** A set of users and servers come together to form a Decentralized Storage Network, where all participants simulate a unified service that outsources storage to each individual server.
 Ideally, each individual server could prove they are storing each replica of data uniquely, in a transparent and publicly verifiable way.
 
+
+--------------------
+
+PDP and PoRet do not prevent a single prover (or a group of provers) from deduplicating data across multiple user requests.
+
+**Defs**
+
+**Sybil attack**  An attacker A has Sybil identities P_0,...,P_n-1 and makes each commit to storing a replica of D. The attack succeeds if P_0,...,P_n-1 store less than n copies of D (i.e. one copy), and produce n valid proofs-of-storage that convince verifier V that D is stored as n independent copies.
+
+
+**outsourcing attack**  Upon recieving challenge c from verifier V, an attacking prover A quickly fetches the corresponding D from another storage provider P' and produces the proof, pretending that A has been storing D all along.
+
+
