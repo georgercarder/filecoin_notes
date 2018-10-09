@@ -1,5 +1,7 @@
 ### Proof of Replication
 
+#### notes from study of 'Proof of Replication' technical report by Juan Benet, David Dalrymple, and Nicola Greco of Protocol Labs
+
 P prover
 V verifier
 c challenge
