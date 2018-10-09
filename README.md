@@ -18,4 +18,4 @@ Necessary in Decentralized Storage Networks.
 
 **retrievability** A scheme supports retrievability, if it is possible for V to extract and reconstruct D merely by issueing many challenges c to P and aggregating corresponding proofs pi^c, see PoRet.
 
-
+**dynamic** A PoS scheme is dynamic if it enables the user V to dynamically update data D to D' stored at server P, to support mutable data without requiring a completely new setup. Dynamic PoS schemes are useful in Cloud Storage settings, and systems with large, frequently mutable data, without need for version history.
