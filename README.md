@@ -87,4 +87,13 @@ PDP and PoRet do not prevent a single prover (or a group of provers) from dedupl
 
 **outsourcing attack**  Upon recieving challenge c from verifier V, an attacking prover A quickly fetches the corresponding D from another storage provider P' and produces the proof, pretending that A has been storing D all along.
 
+**generation attack** If attacker A is in a position to determine D, then A may choose D such that A can regenerate D on demand. Upon recieving challenge c, A regenerates D, and produces the proof, pretending that A has been storing D all along.
+
+-------------------
+
+Generation attack is what prevents most PoS schemes from being used to build Decentralized Storage Networks, i.e. attacker pcks D they can regenerate and get paid for it.
+
+## This is an open problem
+
+### The aim of PoRep is to solve it
 
