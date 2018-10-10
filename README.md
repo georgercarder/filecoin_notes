@@ -140,3 +140,16 @@ The three algorithms are:
 R^D, S_P, S_V <- PoRep.Setup(1^l, D) where S_P, S_V are scheme specific variables for P and V respectively, that depend on the data D and a security parameter l.
 PoRep.Setup is used to initialize the proving scheme and give P and V information they will use to run PoRep.Prove and PoRep.Verify. Some schemes may require either party to compute PoRep.Setup, require it to be a secure multi-party computation, or allow any party to run it.
 
+pi^c <- PoRep.Prove(S_P, R^D, c) where c is a challenge, and pi^c is a proof that a prover has access to R^D, a specific replica of D. 
+PoRep.Prove is run by P to produce a pi^c for V.
+
+{0, 1} <- PoRep.Verify(S_V, c, pi^c) which checks whether a proof is correct. 
+PoRep.Verify is run by V and convinces V whether P has been storing R^D.
+
+------------
+
+A PoRep must be *complete* and *secure*. In addition, PoRep scheme can be desigened to have any of the properties described in the introduction.
+
+(complete) if any honest prover P that stores a replica of D can always produce valid proofs that convice a verifier V.
+
+(secure) if it can pass RepGame.
